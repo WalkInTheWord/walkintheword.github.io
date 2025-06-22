@@ -1,55 +1,140 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Walk in the Word</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; }
-        h1, h2 { color: #2c3e50; }
-        ul { margin-top: 0; }
-        .download-buttons a {
-            display: inline-block;
-            margin: 10px 10px 10px 0;
-            padding: 10px 15px;
-            background-color: #2980b9;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .footer { margin-top: 40px; font-size: 0.9em; color: #777; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walk in the Word App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-light: #f9f9f9;
+      --text-light: #222;
+      --bg-dark: #1c1c1c;
+      --text-dark: #f1f1f1;
+      --accent: #4a7c59;
+    }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      background: var(--accent);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+    }
+    nav {
+      background: #eaeaea;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0.75rem;
+    }
+    nav a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    .feature-section {
+      margin: 2rem auto;
+      max-width: 800px;
+    }
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+    .toggle-btn {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      background: #f1f1f1;
+    }
+  </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <header>
     <h1>Walk in the Word</h1>
-    <h2>Read. Listen. Understand. Daily.</h2>
-    <p>Experience the Bible like never before with Walk in the Word — a mobile app that lets you read, listen, and study scripture with ease. Whether you’re on your morning walk or deep in study, our synced audio + reading experience helps bring the Word to life.</p>
+    <p>Read. Listen. Understand. Daily.</p>
+  </header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#download">Download</a>
+    <a href="#support">Support</a>
+    <a href="#privacy">Privacy</a>
+  </nav>
+  <main>
+    <section id="home">
+      <h2>Welcome to Walk in the Word</h2>
+      <p>Your daily Bible companion with audio playback, Strong’s Concordance, and Messianic highlights.</p>
+    </section>
 
-    <div class="download-buttons">
-        <a href="#">Download for iOS</a>
-        <a href="#">Download for Android</a>
-    </div>
+    <section id="features" class="feature-section">
+      <h2>App Features</h2>
+      <ul>
+        <li>Audio Bible with variable playback speed</li>
+        <li>Strong's Concordance integration</li>
+        <li>Messianic highlighting system</li>
+        <li>Reading plans (30-day, 1-year, chronological)</li>
+        <li>Offline mode with secure storage</li>
+      </ul>
+    </section>
 
-    <h2>Key Features</h2>
-    <ul>
-        <li>Word-for-word translations: ESV, NASB, NKJV, KJV</li>
-        <li>Audio Bible playback with 2x speed control</li>
-        <li>Reading plans: 30-day, 6-month, 1-year, chronological</li>
-        <li>Strong’s Concordance: Greek and Hebrew roots</li>
-        <li>Notes, highlights, and verse sharing</li>
-        <li>No ads, no tracking, offline-friendly</li>
-    </ul>
+    <section id="download" class="feature-section">
+      <h2>Download the App</h2>
+      <p>
+        <a href="#">📱 App Store (Coming Soon)</a><br />
+        <a href="#">📲 Google Play (Coming Soon)</a>
+      </p>
+    </section>
 
-    <h2>Why Walk in the Word?</h2>
-    <p>We believe everyone should have access to Scripture — clearly, securely, and without distractions. Walk in the Word supports your daily devotion, in-depth study, and spiritual growth journey.</p>
+    <section id="verse-of-the-day" class="feature-section">
+      <h2>Verse of the Day</h2>
+      <iframe src="https://www.biblegateway.com/votd/get/?format=html&version=ESV" width="100%" height="100" frameborder="0"></iframe>
+    </section>
 
-    <h2>Testimonies</h2>
-    <blockquote>“I’ve never experienced the Word with this much clarity and ease.” — Beta Tester</blockquote>
-    <blockquote>“The Strong’s tools are incredibly helpful for our small group.” — Pastor Lisa</blockquote>
+    <section id="support" class="feature-section">
+      <h2>Support</h2>
+      <p>Email us at <a href="mailto:support@walkinthewordapp.com">support@walkinthewordapp.com</a></p>
+    </section>
 
-    <div class="footer">
-        <p>© 2025 Walk in the Word<br>
-        <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | Contact: support@walkinthewordapp.com</p>
-    </div>
+    <section id="privacy" class="feature-section">
+      <h2>Privacy Policy</h2>
+      <p>We do not collect personal data or track users. Read our full <a href="#">Privacy Policy</a>.</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 Walk in the Word. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
 </body>
 </html>

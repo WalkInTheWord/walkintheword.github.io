@@ -1,113 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Walk in the Word App</title>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #ecf0f1;
-            --accent-color: #27ae60;
-            --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            font-family: var(--font-stack);
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-        header, footer {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            text-align: center;
-            padding: 1em;
-        }
-        nav {
-            background-color: var(--accent-color);
-            display: flex;
-            justify-content: center;
-            gap: 1em;
-            padding: 1em;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        main {
-            padding: 2em;
-        }
-        .dark-mode {
-            background-color: #1e1e1e;
-            color: #f1f1f1;
-        }
-        .dark-mode header, .dark-mode footer {
-            background-color: #121212;
-            color: #f1f1f1;
-        }
-        .dark-mode nav {
-            background-color: #27ae60;
-        }
-        .toggle-container {
-            text-align: right;
-            padding: 1em;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walk in the Word Bible App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Walk in the Word App</h1>
-        <p>Your daily Bible companion</p>
-    </header>
-    <div class="toggle-container">
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <header class="hero">
+    <div class="container">
+      <h1>Walk in the Word</h1>
+      <p class="tagline">AI-powered Bible study. Word-for-word accuracy. Rooted in Scripture.</p>
+      <div class="cta-buttons">
+        <a href="#download" class="btn">📥 Download APK</a>
+        <a href="#features" class="btn-outline">🔍 Explore Features</a>
+      </div>
     </div>
-    <nav>
-        <a href="#features">Features</a>
-        <a href="#download">Download</a>
-        <a href="#support">Support</a>
-        <a href="#privacy">Privacy</a>
-    </nav>
-    <main>
-        <section id="features">
-            <h2>App Features</h2>
-            <ul>
-                <li>Word-for-word Bible translations</li>
-                <li>Audio Bible with adjustable speed</li>
-                <li>Daily reading plans and tracking</li>
-                <li>Verse highlighting, notes, and bookmarks</li>
-                <li>Offline access and ad-free experience</li>
-                <li>Strong’s Concordance and original language tools</li>
-            </ul>
-        </section>
-        <section id="download">
-            <h2>Download the App</h2>
-            <p>Get it now on:</p>
-            <ul>
-                <li><a href="#">Apple App Store</a></li>
-                <li><a href="#">Google Play Store</a></li>
-            </ul>
-        </section>
-        <section id="support">
-            <h2>Support</h2>
-            <p>Email us at <a href="mailto:support@walkinthewordapp.com">support@walkinthewordapp.com</a></p>
-        </section>
-        <section id="privacy">
-            <h2>Privacy Policy</h2>
-            <p>Your privacy is important. We do not track or sell your data.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Walk in the Word App. All rights reserved.</p>
-    </footer>
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
+  </header>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li><strong>🧠 AI Search:</strong> Ask "What must I do to be saved?" and get contextual answers</li>
+        <li><strong>📖 Word-for-Word Translations:</strong> KJV, NASB, ESV + Strong’s Numbers</li>
+        <li><strong>🔊 Audio Playback:</strong> Adjustable speed & synced verse reading</li>
+        <li><strong>🗓️ Reading Plans:</strong> 30-day, 6-month, 1-year, and chronological options</li>
+        <li><strong>📌 Highlights & Notes:</strong> Save insights, sync data securely</li>
+        <li><strong>🔒 Privacy-First:</strong> No tracking, no ads, just the Word</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bible-versions">
+    <div class="container">
+      <h2>Available Bible Versions</h2>
+      <p>KJV • NASB • ESV • NASB + Strong's • KJV + Strong's</p>
+    </div>
+  </section>
+
+  <section id="download" class="download">
+    <div class="container">
+      <h2>Download Walk in the Word</h2>
+      <a href="/Walk_in_the_Word_AI_Enabled_v0.9.1.zip" class="btn">📦 Download Android APK</a>
+      <p><em>TestFlight access for iOS coming soon</em></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Walk in the Word. Built for truth. Powered by Scripture.</p>
+    </div>
+  </footer>
 </body>
 </html>

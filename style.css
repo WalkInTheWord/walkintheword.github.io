@@ -1,0 +1,27 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(to bottom, #f4f6fa 0%, #ffffff 100%);
+  color: #1a1a1a;
+}
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #e8ebf7, #fdfdfe);
+}
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(to right, #007aff, #0a84ff);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f2f2f7;
+  font-size: 0.9rem;
+}
